@@ -105,7 +105,7 @@ function SignInScreen(props) {
       <View style={{ width: "100%", alignItems: "center", marginTop: RFPercentage(10) }}>
         <MyAppButton
           title="Sign in"
-          onPress={() => handleLogin()}
+          onPress={() => props.navigation.navigate("StartedScreen")}
           padding={RFPercentage(2)}
           backgroundColor={Colors.primary}
           borderColor={Colors.primary}

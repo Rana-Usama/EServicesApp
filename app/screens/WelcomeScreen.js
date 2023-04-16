@@ -11,7 +11,9 @@ import Colors from "../config/Colors";
 function WelcomeScreen(props) {
   return (
     <Screen style={styles.screen}>
-      <Text style={{ color: Colors.white, fontSize: RFPercentage(5), fontFamily: "Poppins_600SemiBold", marginTop: RFPercentage(20) }}>E-Services</Text>
+      <Image style={{ width: RFPercentage(30), height: RFPercentage(33), top: RFPercentage(12) }} source={require("../../assets/Images/tiles.png")} />
+
+      <Text style={{ color: Colors.white, fontSize: RFPercentage(5), fontFamily: "Poppins_600SemiBold", marginTop: RFPercentage(5), alignSelf: "center" }}>E-Services</Text>
 
       <View style={{ width: "70%", justifyContent: "center", alignItems: "center", marginTop: RFPercentage(10) }}>
         <Text style={{ color: Colors.white, fontSize: RFPercentage(2.6), fontFamily: "Poppins_600SemiBold", textAlign: "center" }}>

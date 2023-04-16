@@ -125,7 +125,7 @@ function SignUpScreen(props) {
 
       <View style={{ width: "60%", justifyContent: "center", alignItems: "center", marginTop: RFPercentage(5) }}>
         <Text style={{ color: Colors.primary, fontSize: RFPercentage(2.1), fontFamily: "Poppins_400Regular", textAlign: "center" }}>Already have an account ?</Text>
-        <TouchableOpacity activeOpacity={0.6}>
+        <TouchableOpacity activeOpacity={0.6} onPress={() => props.navigation.navigate("SignInScreen")}>
           <Text style={{ color: Colors.primary, fontSize: RFPercentage(2.1), fontFamily: "Poppins_600SemiBold", textAlign: "center" }}>Sign in!</Text>
         </TouchableOpacity>
       </View>
