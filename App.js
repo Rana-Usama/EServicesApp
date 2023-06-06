@@ -22,6 +22,7 @@ import SignInScreen from "./app/screens/SignInScreen";
 import SignUpScreen from "./app/screens/SignUpScreen";
 import StartedScreen from "./app/screens/StartedScreen";
 import HomeScreen from "./app/screens/HomeScreen";
+import OrderDetailScreen from "./app/screens/OrderDetailScreen";
 
 const Stack = createStackNavigator();
 
@@ -48,12 +49,13 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="WelcomeScreen">
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="OrderDetailScreen">
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
         <Stack.Screen name="SignInScreen" component={SignInScreen} />
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         <Stack.Screen name="StartedScreen" component={StartedScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="OrderDetailScreen" component={OrderDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

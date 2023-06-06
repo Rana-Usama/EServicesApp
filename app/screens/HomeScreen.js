@@ -14,19 +14,19 @@ function HomeScreen(props) {
   const categoriesData = [
     {
       imageSource: require("../../assets/Images/p2.png"),
-      title: "Clean",
+      title: "Massage",
     },
     {
       imageSource: require("../../assets/Images/p1.png"),
       title: "Clean",
     },
     {
-      imageSource: require("../../assets/Images/p2.png"),
-      title: "Clean",
+      imageSource: require("../../assets/Images/p3.png"),
+      title: "Repair",
     },
     {
       imageSource: require("../../assets/Images/p1.png"),
-      title: "Clean",
+      title: "Auto",
     },
     {
       imageSource: require("../../assets/Images/p2.png"),
@@ -50,7 +50,7 @@ function HomeScreen(props) {
       >
         <View style={{ width: "90%", justifyContent: "flex-start", alignItems: "center", marginTop: RFPercentage(8), flexDirection: "row" }}>
           <View style={{ justifyContent: "center", alignItems: "flex-start" }}>
-            <Text style={{ color: "#17278D", fontSize: RFPercentage(3), fontWeight: "bold", fontFamily: "Poppins_700Bold" }}>Hello Fatima</Text>
+            <Text style={{ color: "#17278D", fontSize: RFPercentage(3), fontWeight: "bold", fontFamily: "Poppins_700Bold" }}>Hello MM!</Text>
             <Text style={{ color: "#080F18", fontSize: RFPercentage(1.7), marginTop: RFPercentage(0.4), fontFamily: "Poppins_400Regular" }}>Need a Help?</Text>
           </View>
           <TouchableOpacity activeOpacity={0.8} style={{ position: "absolute", right: 0 }}>
@@ -60,7 +60,7 @@ function HomeScreen(props) {
 
         <View
           style={{
-            marginTop: RFPercentage(6),
+            marginTop: RFPercentage(5),
             borderRadius: RFPercentage(1),
             width: "90%",
             height: RFPercentage(7),
@@ -74,7 +74,7 @@ function HomeScreen(props) {
           <TextInput placeholder="Search" placeholderTextColor={"#FF6610"} style={{ left: RFPercentage(1), width: "100%", fontFamily: "Poppins_400Regular" }} />
         </View>
 
-        <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginTop: RFPercentage(2), width: "100%" }}>
+        <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginTop: RFPercentage(2) }}>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             {categoriesData.map((item, i) => (
               <TouchableOpacity
@@ -84,19 +84,51 @@ function HomeScreen(props) {
                   left: RFPercentage(2),
                   justifyContent: "center",
                   alignItems: "center",
-                  width: RFPercentage(14.5),
-                  height: RFPercentage(19),
+                  width: RFPercentage(13),
+                  height: RFPercentage(17),
                   borderRadius: RFPercentage(3),
                   backgroundColor: "#F9F9FC",
                   marginLeft: i !== 0 ? RFPercentage(2) : 0,
+                  marginRight: i == 4 ? RFPercentage(4) : 0,
                 }}
               >
                 <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={item.imageSource} />
-                <Text style={{ marginTop: RFPercentage(3), color: "#17278D", fontSize: RFPercentage(2) }}>{item.title}</Text>
+                <Text style={{ marginTop: RFPercentage(3), color: "#17278D", fontSize: RFPercentage(1.8) }}>{item.title}</Text>
               </TouchableOpacity>
             ))}
           </ScrollView>
         </View>
+      </View>
+
+      <View style={{ marginTop: RFPercentage(12), width: "86%", flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }}>
+        <TouchableOpacity activeOpacity={0.8}>
+          <Text style={{ color: "#080F18", fontSize: RFPercentage(2), fontWeight: "600" }}>Our Services</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={{ width: "90%", justifyContent: "center", alignItems: "center", marginTop: RFPercentage(5), flexDirection: "row" }}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={{ width: RFPercentage(20), height: RFPercentage(25), borderRadius: RFPercentage(2), backgroundColor: "#F9F9FC", justifyContent: "center", alignItems: "center" }}
+        >
+          <Text style={{ color: "#080F18", fontSize: RFPercentage(2), fontWeight: "600" }}>AC Service</Text>
+          <Image style={{ marginTop: RFPercentage(2), width: RFPercentage(4), height: RFPercentage(4) }} source={require("../../assets/Images/ima.png")} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={{
+            marginLeft: RFPercentage(3),
+            width: RFPercentage(20),
+            height: RFPercentage(25),
+            borderRadius: RFPercentage(2),
+            backgroundColor: "#F9F9FC",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ color: "#080F18", fontSize: RFPercentage(2), fontWeight: "600" }}>Fan Service</Text>
+          <Image style={{ marginTop: RFPercentage(2), width: RFPercentage(4), height: RFPercentage(4) }} source={require("../../assets/Images/ima.png")} />
+        </TouchableOpacity>
       </View>
     </View>
   );
